@@ -13,7 +13,7 @@ let router=  new Router({
     scrollBehavior() {
         return window.scrollTo({ top: 0, behavior: 'smooth' });
     },
-    //mode: 'history',
+    mode: 'history',
     routes: [
 
         // Dashboards
