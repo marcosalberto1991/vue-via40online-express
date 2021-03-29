@@ -18,14 +18,14 @@ let router=  new Router({
 
         // Dashboards
         {   //login
-            path: 'Login',
+            path: '/via40onlineexpress/dist/Login',
             name: 'Login', 
             meta: {layout: 'userpages'},
             component: () => import('../Modulos/Auth/Login.vue'),
         },
         //recuados
         {
-            path: 'RecaudosChinauta',
+            path: '/via40onlineexpress/dist/RecaudosChinauta',
             name: 'RecaudosChinauta',
             meta: { requiresAuth: true},
             component: () => import('../DemoPages/Dashboards/Chinauta.vue'),
