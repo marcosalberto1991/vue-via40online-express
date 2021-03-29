@@ -18,6 +18,12 @@ let router=  new Router({
 
         // Dashboards
         {   //login
+            path: '/',
+            name: 'Login', 
+            meta: {layout: 'userpages'},
+            component: () => import('../Modulos/Auth/Login.vue'),
+        },
+        {   //login
             path: '/via40onlineexpress/dist/Login',
             name: 'Login', 
             meta: {layout: 'userpages'},
