@@ -25,14 +25,14 @@ let router=  new Router({
         },
         //recuados
         {
-            path: '/RecaudosChinauta',
+            path: '/via40onlineexpress/dist/RecaudosChinauta',
             name: 'RecaudosChinauta',
             meta: { requiresAuth: true},
             component: () => import('../DemoPages/Dashboards/Chinauta.vue'),
             
         },
         {
-            path: '/sin',
+            path: '/via40onlineexpress/dist/Login',
             name: 'Recaurdos2',
             component: () => import('../DemoPages/Dashboards/Analytics.vue'),
             
