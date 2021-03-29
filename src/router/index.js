@@ -13,19 +13,19 @@ let router=  new Router({
     scrollBehavior() {
         return window.scrollTo({ top: 0, behavior: 'smooth' });
     },
-    mode: 'history',
+    //mode: 'history',
     routes: [
 
         // Dashboards
         {   //login
-            path: '/Login',
+            path: 'Login',
             name: 'Login', 
             meta: {layout: 'userpages'},
             component: () => import('../Modulos/Auth/Login.vue'),
         },
         //recuados
         {
-            path: '/RecaudosChinauta',
+            path: 'RecaudosChinauta',
             name: 'RecaudosChinauta',
             meta: { requiresAuth: true},
             component: () => import('../DemoPages/Dashboards/Chinauta.vue'),
