@@ -18,7 +18,7 @@ let router=  new Router({
 
         // Dashboards
         {   //login
-            path: '/Login',
+            path: '/via40onlineexpress/dist/Login',
             name: 'Login', 
             meta: {layout: 'userpages'},
             component: () => import('../Modulos/Auth/Login.vue'),
@@ -32,7 +32,7 @@ let router=  new Router({
             
         },
         {
-            path: '/via40onlineexpress/dist/Login',
+            path: '/via40onlineexpress/dist/Login2',
             name: 'Recaurdos2',
             component: () => import('../DemoPages/Dashboards/Analytics.vue'),
             
