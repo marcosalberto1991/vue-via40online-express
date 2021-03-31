@@ -203,7 +203,7 @@ router.beforeEach((to, from, next) => {
         next()
         return
       }
-      next('/login') 
+      next('/via40onlineexpress/dist/Login') 
     } else {
       next() 
     }
