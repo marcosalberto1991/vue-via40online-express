@@ -43,11 +43,13 @@
                         icon: 'pe-7s-rocket',
                         child: [
                             {
-                                href: '/via40onlineexpress/dist/RecaudosChinauta',
+                                //href: '/via40onlineexpress/dist/RecaudosChinauta',
+                                href: '/RecaudosChinauta',
                                 title: 'Chinauta',
                             },
                             {
-                                href: '/via40onlineexpress/dist/Login',
+                                href: '/Login',
+                                //href: '/via40onlineexpress/dist/Login',
                                 title: 'Login',
                             },
                         ]
