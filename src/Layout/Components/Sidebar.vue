@@ -34,52 +34,141 @@
                 sidebarActive: false,
 
                 menu: [
+                    
                     {
                         header: true,
-                        title: 'Recaudos',
+                        title: 'Menu',
+                    },
+                    {
+                        icon: 'pe-7s-light',
+                        title: 'Menu Principal',
+                        href:'/MenuPrincipal',
+                        
                     },
                     {
                         title: 'Recaudos',
                         icon: 'pe-7s-rocket',
+                        disabled: !this.$can('Menu_Recaudos'),
+                        //hidden: this.$can('Menu_Recaudos'),
+                        //hidden: false,
                         child: [
                             {
                                 //href: '/via40onlineexpress/dist/RecaudosChinauta',
-                                href: '/RecaudosChinauta',
+                                //href: '/RecaudosChinauta',
                                 title: 'Chinauta',
+                                child: [
+                                    {
+                                        title: 'Trafico',
+                                        href: '/RecaudoDataChinauta',
+                                    },
+                                    {
+                                        title: 'Estadisticas',
+                                        href: '/Recaudo-Chinauta',
+                                    },
+                                    {
+                                        title: 'Informen',
+                                        href: '/elements/buttons-standard',
+                                    },
+                                ]
                             },
+                            {
+                                //href: '/via40onlineexpress/dist/RecaudosChinauta',
+                                //href: '/RecaudosChinauta',
+                                title: 'Chusaca',
+                                child: [
+                                    {
+                                        title: 'Trafico',
+                                        href: '/elements/buttons-standard',
+                                    },
+                                    {
+                                        title: 'Estadisticas',
+                                        href: '/Recaudo-Chusaca',
+                                    },
+                                    {
+                                        title: 'Informen',
+                                        href: '/elements/buttons-standard',
+                                    },
+                                ]
+                            },
+                            /*
                             {
                                 href: '/Login',
                                 //href: '/via40onlineexpress/dist/Login',
                                 title: 'Login',
                             },
+                            */
                         ]
                     },
                     {
-                        title: 'Pages',
+                        title: 'Operaciones',
                         icon: 'pe-7s-browser',
                         child: [
                             {
-                                href: '/pages/login-boxed',
-                                title: 'Login Boxed',
+                                href: '/OperacionesDashboard',
+                                title: 'Dashboard',
                             },
                             {
-                                href: '/pages/register-boxed',
-                                title: 'Register Boxed',
+                                href: '/via40reporta',
+                                title: 'Via 40 reporta',
                             },
                             {
-                                href: '/pages/forgot-password-boxed',
-                                title: 'Forgot Password Boxed',
+                                //href: '/pages/forgot-password-boxed',
+                                title: 'Mercacias Peligrosa',
+                                child: [
+                                    {
+                                        title: 'Merc. Peli. Grafica',
+                                        href: '/MercanciasPeligrosa',
+                                    },
+                                    {
+                                        title: 'Merc. Peli. Formulario',
+                                        href: '/MercanciasPeligrosa',
+                                    },
+                                    
+                                ]
                             },
+                            {
+                                //href: '/pages/forgot-password-boxed',
+                                title: 'Inspecciones viales',
+                                child: [
+                                    {
+                                        title: 'Ins. Viales. Grafica',
+                                        href: '/elements/buttons-standard',
+                                    },
+                                    {
+                                        title: 'Ins. Viales. Formulario',
+                                        href: '/elements/buttons-standard',
+                                    },
+                                    
+                                ]
+                            },
+                            {
+                                //href: '/pages/forgot-password-boxed',
+                                title: 'Inspecciones viales',
+                                child: [
+                                    {
+                                        title: 'Ins. Viales. Grafica',
+                                        href: '/elements/buttons-standard',
+                                    },
+                                    {
+                                        title: 'Ins. Viales. Formulario',
+                                        href: '/elements/buttons-standard',
+                                    },
+                                    
+                                ]
+                            },
+                            
                         ]
                     },
-                    {
-                        header: true,
-                        title: 'UI Components',
-                    },
+                  
                     {
                         icon: 'pe-7s-diamond',
-                        title: 'Elements',
+                        title: 'ITS',
                         child: [
+                            {
+                                title: 'ITS',
+                                href: '/ITS',
+                            },
+                            /*
                             {
                                 title: 'Buttons',
                                 child: [
@@ -117,16 +206,18 @@
                                 title: 'Utilities',
                                 href: '/elements/utilities',
                             },
+                            */
                         ],
                     },
                     {
                         icon: 'pe-7s-car',
-                        title: 'Components',
+                        title: 'SST',
                         child: [
                             {
-                                title: 'Tabs',
-                                href: '/components/tabs',
+                                title: 'Salud',
+                                href: '/PerfilSalud',
                             },
+                            /*
                             {
                                 title: 'Accordions',
                                 href: '/components/accordions',
@@ -155,18 +246,54 @@
                                 title: 'Maps',
                                 href: '/components/maps',
                             },
+                            */
                         ],
                     },
                     {
                         icon: 'pe-7s-display2',
-                        title: 'Tables',
+                        title: 'Obras',
                         child: [
                             {
-                                title: 'Regular Tables',
+                                title: 'KPI',
+                                href: '/KPI',
+                            },
+                            {
+                                title: 'SCADA',
+                                href: '/tables/regular-tables',
+                            },
+                            {
+                                title: 'ITL',
+                                href: '/tables/regular-tables',
+                            },
+                            {
+                                title: 'Separado',
+                                href: '/tables/regular-tables',
+                            },
+                            {
+                                title: 'BITUBO',
                                 href: '/tables/regular-tables',
                             },
                         ]
                     },
+                    {
+                        icon: 'pe-7s-display2',
+                        title: 'Puente',
+                        child: [
+                            {
+                                title: 'Puentes Vehicuares',
+                                href: '/PuenteVehiculares',
+                            },
+                            {
+                                title: 'Puentes Peatonales',
+                                href: '/PuentePeatonales',
+                            },
+                        ]
+                    },
+
+                    /////////////////////////////////////
+                    /////////////////////////////////////
+                    /////////////////////////////////////
+                    /*
                     {
                         header: true,
                         title: 'Dashboard Boxes',
@@ -208,6 +335,7 @@
                         title: 'ChartJS',
                         href: '/charts/chartjs',
                     },
+                    */
                 ],
                 collapsed: true,
 
@@ -219,7 +347,10 @@
             sidebarbg: String,
         },
         methods: {
-
+            $can(permissionName) {
+                var permiso= localStorage.getItem("permisos")
+                return permiso.indexOf(permissionName) !== -1;
+            },
             toggleBodyClass(className) {
                 const el = document.body;
                 this.isOpen = !this.isOpen;

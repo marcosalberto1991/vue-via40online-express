@@ -13,7 +13,7 @@ let router=  new Router({
     scrollBehavior() {
         return window.scrollTo({ top: 0, behavior: 'smooth' });
     },
-    mode: 'history',
+    //mode: 'history',
     routes: [
 
         // Dashboards
@@ -40,11 +40,23 @@ let router=  new Router({
             
         },
         {
+            //path: '/via40onlineexpress/dist/RecaudosChinauta',
+            path: '/PerfilSalud',
+            name: 'PerfilSalud',
+            meta: { requiresAuth: true},
+            component: () => import('../DemoPages/Dashboards/PerfilSalud-vue.vue'),
+            
+        },
+
+
+        
+        {
             path: '/via40onlineexpress/dist/Login2',
             name: 'Recaurdos2',
             component: () => import('../DemoPages/Dashboards/Analytics.vue'),
             
         },
+        
         {
             path: '/con',
             name: 'analytics',
@@ -55,13 +67,112 @@ let router=  new Router({
         },
 
         // Pages
+        {
+            path: '/SST',
+            name: 'SST',
+            meta: { 
+                requiresAuth: true
+            },
+            component: () => import('../DemoPages/Dashboards/SST.vue'),
+        },
+        {
+            path: '/MenuPrincipal',
+            name: 'MenuPrincipal',
+            meta: { 
+                requiresAuth: true
+            },
+            component: () => import('../DemoPages/Dashboards/MenuPrincipal.vue'),
+        },
 
+        
+        {
+            path: '/Recaudo-Chinauta',
+            name: 'Recaudo-Chinauta',
+            meta: { 
+                requiresAuth: true
+            },
+            component: () => import('../DemoPages/Dashboards/Recaudo-chinauta.vue'),
+        },
+        {
+            path: '/Recaudo-Chusaca',
+            name: 'Recaudo-Chusaca',
+            meta: { 
+                requiresAuth: true
+            },
+            component: () => import('../DemoPages/Dashboards/RecaudoChusaca.vue'),
+        },
+        {
+            path: '/RecaudoDataChinauta',
+            name: 'RecaudoDataChinauta',
+            meta: { 
+                requiresAuth: true
+            },
+            component: () => import('../DemoPages/Dashboards/RecaudoDataChinauta.vue'),
+        },
+        {
+            path: '/OperacionesDashboard',
+            name: 'OperacionesDashboard',
+            meta: { 
+                requiresAuth: true
+            },
+            component: () => import('../DemoPages/Dashboards/OperacionesDashboard.vue'),
+        },
+        {
+            path: '/via40reporta',
+            name: 'via40reporta',
+            meta: { 
+                requiresAuth: true
+            },
+            component: () => import('../DemoPages/Dashboards/Via40reporta.vue'),
+        },
+        {
+            path: '/MercanciasPeligrosa',
+            name: 'MercanciasPeligrosa',
+            meta: { 
+                requiresAuth: true
+            },
+            component: () => import('../DemoPages/Dashboards/MercanciasPeligrosa.vue'),
+        },
+        {
+            path: '/ITS',
+            name: 'ITS',
+            meta: { 
+                requiresAuth: true
+            },
+            component: () => import('../DemoPages/Dashboards/ITS.vue'),
+        },
+        {
+            path: '/KPI',
+            name: 'KPI',
+            meta: { 
+                requiresAuth: true
+            },
+            component: () => import('../DemoPages/Dashboards/KPI.vue'),
+        },
+        {
+            path: '/PuenteVehiculares',
+            name: 'PuenteVehiculares',
+            meta: { 
+                requiresAuth: true
+            },
+            component: () => import('../DemoPages/Dashboards/PuenteVehiculares.vue'),
+        },
+        {
+            path: '/PuentePeatonales',
+            name: 'PuentePeatonales',
+            meta: { 
+                requiresAuth: true
+            },
+            component: () => import('../DemoPages/Dashboards/PuentePeatonales.vue'),
+        },
+        /*
         {
             path: '/pages/login-boxed',
             name: 'login-boxed',
             meta: {layout: 'userpages'},
             component: () => import('../DemoPages/UserPages/LoginBoxed.vue'),
         },
+        */
         {
             path: '/pages/register-boxed',
             name: 'register-boxed',

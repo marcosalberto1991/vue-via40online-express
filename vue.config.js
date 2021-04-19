@@ -6,4 +6,5 @@ module.exports = {
         ? './via40onlineexpress/dist/'
         : '/'
 }
+//backendvia40online
     //ApiUrl:'http://200.62.60.89:8998/via40online/api',

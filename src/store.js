@@ -31,10 +31,10 @@ export default new Vuex.Store({
 
     actions: {
         login({ commit }, user) {
-            console.info('tire de auth');
+            //console.info('tire de auth');
             return new Promise((resolve, reject) => {
                 commit('auth_request')
-                axios({ url: 'http://200.62.60.89:8998/via40online/api/auth/login', data: user, method: 'POST' })
+                axios({ url: 'http://200.62.60.89:8998/backendvia40online/api/auth/login', data: user, method: 'POST' })
                     .then(resp => {
 
                         const token = resp.data.access_token
@@ -78,6 +78,7 @@ export default new Vuex.Store({
             })
         },
         logout({ commit }) {
+            // eslint-disable-next-line
             return new Promise((resolve, reject) => {
                 commit('logout')
                 localStorage.removeItem('token')
